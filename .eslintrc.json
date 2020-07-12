@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "presets": ["next/babel"],
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ]
+  }
+}
