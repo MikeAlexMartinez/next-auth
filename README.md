@@ -13,9 +13,12 @@ I won't be using nextjs' built in api routes for this project.
 ## Plan
 
 To demonstrate login and logout functionality the application will have three pages:
+
 1. Landing page / index page - Auth not required
 2. Login Page
 3. Home Page - A users homepage, which will require authentication.
+
+I will use a global redux store to store user info providing the user is logged in and / or a present token is authorised.
 
 ### Landing Page
 
@@ -25,17 +28,20 @@ Nice to have: If the user is already logged in the page will have a component sh
 ### Login Page
 
 Must haves:
+
 - A smaller logo with link to get back to landing page
 - Two inputs, one for a username, and one for the password,
 - Button to submit the form.
 
 Nice to haves:
+
 - If user is redirected to login form from protected route (home page) message should be displayed to tell user they need to login.
 - If user enters invalid username or password message should display.
 
 ### Home Page
 
 Must Haves:
+
 - A message to say hello to the user with their name displayed.
 - A button to allow the user logout
 - A link to get back to the landing page.
