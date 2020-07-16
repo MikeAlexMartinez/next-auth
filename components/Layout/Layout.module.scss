@@ -1,11 +1,27 @@
 .container {
   min-height: 100vh;
   min-width: 100vw;
+  padding: 10px;
   display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
+  @media screen and (min-height: 600px) {
+    justify-content: space-around;
+  }
+  @media screen and (min-height: 850px) {
+    justify-content: center;
+  }
 }
 
 .column {
   flex-direction: column;
+}
+
+.inner {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

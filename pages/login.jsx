@@ -1,16 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+
+import Layout from '../components/Layout/Layout';
+import LoginForm from '../components/LoginForm/LoginForm';
 
 const Login = () => (
-  <div>
-    Login
-    <Link href="/home">
-      <a>Home</a>
-    </Link>
-    <Link href="/">
-      <a>Next Auth</a>
-    </Link>
-  </div>
+  <Layout column logo>
+    <LoginForm />
+  </Layout>
 );
 
 export default Login;

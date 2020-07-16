@@ -1,0 +1,12 @@
+.logoText {
+  font-family: "Candara", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eaeaea;
+  font-style: italic;
+  cursor: pointer;
+
+  &.large {
+    font-size: 35px;
+  }
+}

@@ -36,3 +36,8 @@ export const hasExpired = createSelector(
   rootSelector,
   (authState) => authState.hasExpired
 );
+
+export const checkingToken = createSelector(
+  rootSelector,
+  (authState) => authState.checkingToken
+);

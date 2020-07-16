@@ -4,6 +4,8 @@ import {
   LOGIN_ERROR,
   LOGOUT,
   SET_EXPIRED,
+  CHECKING_TOKEN,
+  FINISHED_CHECKING,
 } from './actions';
 
 export const initialState = {
@@ -11,6 +13,7 @@ export const initialState = {
   user: {},
   errorMessage: '',
   isLoggingIn: false,
+  checkingToken: false,
   hasExpired: false,
 };
 
@@ -23,6 +26,18 @@ export const reducer = (state = initialState, action = {}) => {
         isLoggingIn: true,
       };
     }
+    case CHECKING_TOKEN: {
+      return {
+        ...state,
+        checkingToken: true,
+      };
+    }
+    case FINISHED_CHECKING: {
+      return {
+        ...state,
+        checkingToken: false,
+      };
+    }
     case LOGIN_SUCCESS: {
       return {
         ...state,
@@ -31,6 +46,7 @@ export const reducer = (state = initialState, action = {}) => {
         errorMessage: '',
         isLoggingIn: false,
         hasExpired: false,
+        checkingToken: false,
       };
     }
     case LOGIN_ERROR: {

@@ -6,15 +6,21 @@ import {
   reducer as auth,
   initialState as authInitialState,
 } from './auth/reducer';
+import {
+  reducer as portals,
+  initialState as portalInitialState,
+} from './portals';
 
 let store;
 
 const initialState = {
   auth: authInitialState,
+  portals: portalInitialState,
 };
 
 const rootReducer = combineReducers({
   auth,
+  portals,
 });
 
 export const initializeStore = (preloadedState) => {
